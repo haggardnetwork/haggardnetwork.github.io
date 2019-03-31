@@ -385,7 +385,7 @@ function copying_function(string) {
         <div class="fix-10-12 toCenter">
           <h1 class="ae-1">Server Maps</h1>
           <p class="ae-2"><span class="opacity-8">Live server map in your browser and downloads for offline use</span></p>
-            <a class="button white small uppercase cropBottom ae-7 fromCenter dialogTrigger" data-dialog-id="livemap"><i class="material-icons">pageview</i>VIEW</a>
+            <a class="button white small uppercase cropBottom ae-7 fromCenter popupTrigger" data-popup-id="livemap"><i class="material-icons">pageview</i>VIEW</a>
         </div>
         <div class="fix-12-12">  
           <ul class="grid grid-74 later equal margin-top-5">
@@ -450,21 +450,19 @@ function copying_function(string) {
   <div class="background" style="background-image:url(assets/img/background/9.jpg)"></div>
 </section>
     
-<!-- Live Map -->
-	<div class="dialog hidden black" data-dialog-id="livemap">
-		<div class="close" data-dialog-action="close"></div>
-		<iframe src="http://haggard.gq" width="350" height="350"></iframe>
-		<a href="http://haggard.gq" target="_blank"><div class="dialogContent">
-			<div class="text center">
-				<strong>Live Map</strong><br>
-					Live view of Haggard Network's maps
-			</div>
-		</div></a>
-		<ul>
-			<li data-href="https://mega.nz/#F!pMxGgCpb!9UbUePseCkX4mm-EbvHBxw" data-target="_blank" data-dialog-action="close">Download</li>
-			<li data-dialog-action="close">Close</li>
-		</ul>
-	</div>
+<!-- Haggard Map -->
+<div class="popup fullscreen" data-popup-id="livemap">
+  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="popupContent embedVideo">
+          <iframe defer src="http://haggard.gq" frameborder="0" scrolling="auto" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Shop -->
 <section data-name="shop" data-title="Shop" class="slide fade-6 scenic">
